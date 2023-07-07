@@ -47,7 +47,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-My first Milestone entailed the building of the rover. While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuilding it the right way. Then, when I was wiring it, I struggled with connecting the wires. In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in. The motor board is essentialy the middle man between the arduino and the motors.
+My first Milestone entailed the building of the rover. While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuilding it the right way. Then, when I was wiring it, I struggled with connecting the wires. In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in. The motor board is essentialy the middle man between the Arduino and the motors. It calculates the polarity and regulates the power to the motors. After, I wired my Arduino to the motor board and used some source code from ... to get my rover moving. In the future, I will power it with batteries and use an acceleromater to controll the rover.
 
 <!---
 
