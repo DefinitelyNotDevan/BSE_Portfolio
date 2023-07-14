@@ -41,26 +41,211 @@ My second milestone saw me creating a controller to controll my car. The way thi
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/nzAVfoaRZ_Q" title="BlueStamp Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-My first Milestone entailed the building of the rover. While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuilding it the right way. Then, when I was wiring it, I struggled with connecting the wires. In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in. The motor board is essentialy the middle man between the Arduino and the motors. It calculates the polarity and regulates the power to the motors. After, I wired my Arduino to the motor board and used some source code from [here]([url](https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview)) to get my rover moving. In the future, I will power it with batteries and use an acceleromater to controll the rover.
+My first Milestone entailed the building of the rover. While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuilding it the right way. Then, when I was wiring it, I struggled with connecting the wires. In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in. The motor board is essentialy the middle man between the Arduino and the motors. It calculates the polarity and regulates the power to the motors. After, I wired my Arduino to the motor board and used some source code from [here}(https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview)) to get my rover moving. In the future, I will power it with batteries and use an acceleromater to controll the rover.
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+Here is the code for my car without any modifications.
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+//Code for the car
+// This is to receive data from the other bluetooth module and read the gestures
+// The robot should move accordingly! 
+
+#include <SoftwareSerial.h>
+
+#define tx 2
+#define rx 3
+
+SoftwareSerial configBt(rx, tx);
+
+//character variable for command
+char c = "";
+
+//start at 50% duty cycle
+//int s = 120;
+
+//change based on motor pins
+int in1 = 5;
+int in2 = 6;
+int in3 = 9;
+int in4 = 10;
+
+void setup()
+{
+  //opens serial monitor and bluetooth serial monitor
+  Serial.begin(38400);
+  configBt.begin(38400);
+  pinMode(tx, OUTPUT);
+  pinMode(rx, INPUT);
+
+  //initializes all motor pins as outputs
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  //checks for bluetooth data
+  if (configBt.available()){
+    //if available stores to command character
+    c = (char)configBt.read();
+    //prints to serial
+    Serial.println(c);
+  }
 
+  //acts based on character
+  switch(c){
+    
+    //forward case
+    case 'F':
+      forward();
+      break;
+      
+    //left case
+    case 'L':
+      left();
+      break;
+      
+    //right case
+    case 'R':
+      right();
+      break;
+      
+    //back case
+    case 'B':
+      back();
+      break;
+      
+    //default is to stop robot
+    case 'S':
+      freeze();
+    }
+}
+
+//moves robot forward 
+void forward(){
+  
+    //chages directions of motors
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+
+  }
+
+//moves robot left
+void left(){
+
+    //changes directions of motors
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, HIGH);
+
+  }
+
+//moves robot right
+void right(){
+
+    //changes directions of motors
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+
+  }
+
+//moves robot backwards
+void back(){
+
+    //changes directions of motors
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, HIGH);
+
+  }
+
+//stops robot
+void freeze(){
+
+    //changes directions of motors
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, LOW);
+
+  }
+
+```
+
+```c++
+#include <Wire.h>
+
+#define MPU6050_ADDRESS 0x68
+
+int16_t accelerometerX, accelerometerY, accelerometerZ;
+
+void setup()
+{
+  Wire.begin();
+  Serial1.begin(38400);
+
+  // Initialize MPU6050
+  Wire.beginTransmission(MPU6050_ADDRESS);
+  Wire.write(0x6B);  // PWR_MGMT_1 register
+  Wire.write(0);     // set to zero (wakes up the MPU6050)
+  Wire.endTransmission(true);
+
+  delay(100); // Delay to allow MPU6050 to stabilize
+}
+
+void loop()
+{
+  readAccelerometerData();
+  determineGesture();
+  delay(500);
+}
+
+void readAccelerometerData()
+{
+  Wire.beginTransmission(MPU6050_ADDRESS);
+  Wire.write(0x3B);  // starting with register 0x3B (ACCEL_XOUT_H)
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU6050_ADDRESS, 6, true);  // request a total of 6 registers
+
+  // read accelerometer data
+  accelerometerX = Wire.read() << 8 | Wire.read();
+  accelerometerY = Wire.read() << 8 | Wire.read();
+  accelerometerZ = Wire.read() << 8 | Wire.read();
+}
+
+void determineGesture()
+{
+  if (accelerometerY >= 6500) {
+    Serial1.write('F');
+  }
+  else if (accelerometerY <= -4000) {
+    Serial1.write('B');
+  }
+  else if (accelerometerX <= -3250) {
+    Serial1.write('L');
+  }
+  else if (accelerometerX >= 3250) {
+    Serial1.write('R');
+  }
+  else {
+    Serial1.write('S');
+  }
 }
 ```
+
+And here is the code for the controller
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
