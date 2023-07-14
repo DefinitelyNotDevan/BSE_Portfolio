@@ -25,7 +25,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/cA4MnJ2BhBE" title="Bluestamp Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cA4MnJ2BhBE" title="Bluestamp Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 My second milestone saw me creating a controller to controll my car. The way this will work is using an accelerometer, bluetooth chip, and arduino micro to communicate with my arduino uno connected to my car. The accelerometer sends its inputs to the arduino micro which then gets sent to the arduino uno with a bluetooth chip and the uno respondes by doing the action corresponding to the value of the accelerometer. I struggled with pairing the two bluetooth modules as you needed one for the arduino micro and one for the arduino uno but I eventually realized that I had bad wiring and I needed to unplug certain wires in the pairing proccess for it to work. I am suprised on how well my project is working because in the past it has taken me much longer to create my projects. My final milestone will be my modifications.
 
@@ -33,7 +33,7 @@ My second milestone saw me creating a controller to controll my car. The way thi
 
 
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/nzAVfoaRZ_Q" title="BlueStamp Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nzAVfoaRZ_Q" title="BlueStamp Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 My first Milestone entailed the building of the rover. While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuilding it the right way. Then, when I was wiring it, I struggled with connecting the wires. In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in. The motor board is essentialy the middle man between the Arduino and the motors. It calculates the polarity and regulates the power to the motors. After, I wired my Arduino to the motor board and used some source code from [here](https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview)) to get my rover moving. In the future, I will power it with batteries and use an acceleromater to controll the rover.
 
