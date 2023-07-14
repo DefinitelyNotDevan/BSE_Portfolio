@@ -1,12 +1,6 @@
 # Gesture Controlled Rover
 My project is the Gesture Controlled Rover that uses an accelerometer to determnine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main aurdiono board and for my modification I choose to... .While I struggled to connect wires and pair bluetooth modules, I still completed my project and gained new knowledge regarding engineering.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
-
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Devan G | Marin Academy | Electrical Engineering | Incoming Freshman
@@ -41,13 +35,13 @@ My second milestone saw me creating a controller to controll my car. The way thi
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/nzAVfoaRZ_Q" title="BlueStamp Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-My first Milestone entailed the building of the rover. While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuilding it the right way. Then, when I was wiring it, I struggled with connecting the wires. In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in. The motor board is essentialy the middle man between the Arduino and the motors. It calculates the polarity and regulates the power to the motors. After, I wired my Arduino to the motor board and used some source code from [here}(https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview)) to get my rover moving. In the future, I will power it with batteries and use an acceleromater to controll the rover.
+My first Milestone entailed the building of the rover. While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuilding it the right way. Then, when I was wiring it, I struggled with connecting the wires. In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in. The motor board is essentialy the middle man between the Arduino and the motors. It calculates the polarity and regulates the power to the motors. After, I wired my Arduino to the motor board and used some source code from [here](https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview)) to get my rover moving. In the future, I will power it with batteries and use an acceleromater to controll the rover.
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
-Here is the code for my car without any modifications.
+Here is the code for my car without any modifications. (Arduino Uno)
 
 ```c++
 //Code for the car
@@ -183,6 +177,7 @@ void freeze(){
   }
 
 ```
+And here is the code for the controller. (Arduino Micro)
 
 ```c++
 #include <Wire.h>
@@ -245,7 +240,7 @@ void determineGesture()
 }
 ```
 
-And here is the code for the controller
+
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
