@@ -7,7 +7,7 @@ My project is the Gesture Controlled Rover that uses an accelerometer to determn
 
 
 
-<img src="unnamed.jpg"  width="30%" height="30%">
+<img src="unnamed.jpg"  width="35%" height="35%">
   
 # Final Milestone
 
