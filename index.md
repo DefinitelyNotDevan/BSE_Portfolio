@@ -1,5 +1,5 @@
 # Gesture Controlled Rover
-My project is the Gesture Controlled Rover that uses an accelerometer to determnine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main aurdiono board and it does this with two bluetooth module. While I struggled to connect wires and pair bluetooth modules and not break my project, I still completed my project and gained new knowledge regarding engineering.
+My project is the Gesture Controlled Rover that uses an accelerometer to determine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main aurdiono board and it does this with two Bluetooth modules. While I struggled to connect wires and pair Bluetooth modules and not break my project, I still completed my project and gained new knowledge regarding engineering.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -26,11 +26,11 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cA4MnJ2BhBE" title="Bluestamp Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-- My second milestone saw me creating a controller to controll my car.
-- The way this will work is using an accelerometer, bluetooth chip, and arduino micro to communicate with my arduino uno connected to my car.
+- My second milestone saw me creating a controller to control my car.
+- The way this will work is by using an accelerometer, Bluetooth chip, and Arduino micro to communicate with my Arduino Uno connected to my car.
 - I have not fully completed the controller because I have not added an accelerometer
-- I struggled with pairing the two bluetooth modules as you needed one for the arduino micro and one for the arduino uno but I eventually realized that I had bad wiring and I needed to unplug certain wires in the pairing proccess for it to work.
-- I am suprised on how well my project is working because in the past it has taken me much longer to create my projects. My final milestone will be my modifications and the accelerometer
+- I struggled with pairing the two Bluetooth modules as you needed one for the Arduino micro and one for the Arduino uno but I eventually realized that I had bad wiring and I needed to unplug certain wires in the pairing process for it to work.
+- I am surprised at how well my project is working because in the past it has taken me much longer to create my projects. My final milestone will be my modifications and the accelerometer
 
 # First Milestone
 
@@ -39,12 +39,12 @@ For your final milestone, explain the outcome of your project. Key details to in
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nzAVfoaRZ_Q" title="BlueStamp Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 - My first Milestone entailed the building of the rover.
-- While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuilding it the right way.
+- While assembling the chassis, I forgot to read all of the instructions which lead to me having to take apart part of the rover and rebuild it the right way.
 - When I was wiring it, I struggled with connecting the wires.
 - In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in.
-- The motor board is essentialy the middle man between the Arduino and the motors. It calculates the polarity and regulates the power to the motors.
+- The motor board is essentially the middle man between the Arduino and the motors. It calculates the polarity and regulates the power of the motors.
 - After, I wired my Arduino to the motor board and used some source code from [here](https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview) to get my rover moving.
-- In the future, I will power it with batteries and use an acceleromater to controll the rover.
+- In the future, I will power it with batteries and use an accelerometer to control the rover.
 
 # Schematics 
 
@@ -55,7 +55,7 @@ Here is the code for my car without any modifications. (Arduino Uno)
 
 ```c++
 //Code for the car
-// This is to receive data from the other bluetooth module and read the gestures
+// This is to receive data from the other Bluetooth module and read the gestures
 // The robot should move accordingly! 
 
 #include <SoftwareSerial.h>
@@ -79,7 +79,7 @@ int in4 = 10;
 
 void setup()
 {
-  //opens serial monitor and bluetooth serial monitor
+  //opens serial monitor and Bluetooth serial monitor
   Serial.begin(38400);
   configBt.begin(38400);
   pinMode(tx, OUTPUT);
@@ -94,7 +94,7 @@ void setup()
 
 void loop()
 {
-  //checks for bluetooth data
+  //checks for Bluetooth data
   if (configBt.available()){
     //if available stores to command character
     c = (char)configBt.read();
