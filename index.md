@@ -43,7 +43,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 - When I was wiring it, I struggled with connecting the wires.
 - In the end, I just needed to unscrew the screws on the top of the terminals on the motor board and tighten them once the wires were in.
 - The motor board is essentialy the middle man between the Arduino and the motors. It calculates the polarity and regulates the power to the motors.
-- After, I wired my Arduino to the motor board and used some source code from [here](https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview)) to get my rover moving.
+- After, I wired my Arduino to the motor board and used some source code from [here](https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview) to get my rover moving.
 - In the future, I will power it with batteries and use an acceleromater to controll the rover.
 
 # Schematics 
@@ -263,7 +263,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 | 2 Bluetooth Modules | Communication between Uno and Micro | $20.78 | <a href="https://www.amazon.com/HiLetgo-Wireless-Bluetooth-Transceiver-Arduino/dp/B071YJG8DR"> Link </a> |
 | Arduino Uno | Controlling the Car | $24.00| <a href="https://store.arduino.cc/products/arduino-uno-rev3"> Link </a> |
 | Arduino Micro | Controlling the Controller | $21.60 | <a href="https://store.arduino.cc/products/arduino-micro"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Motor Driver Board | Controlling the Motors | $6.99 | <a href="https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/ref=asc_df_B014KMHSW6/?tag=hyprod-20&linkCode=df0&hvadid=167139094796&hvpos=&hvnetw=g&hvrand=13469222211329594770&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032008&hvtargid=pla-306436938191&psc=1"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
