@@ -1,5 +1,5 @@
 # Gesture Controlled Rover
-My project is the Gesture Controlled Rover that uses an accelerometer to determnine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main aurdiono board and for my modification I choose to... .While I struggled to connect wires and pair bluetooth modules, I still completed my project and gained new knowledge regarding engineering.
+My project is the Gesture Controlled Rover that uses an accelerometer to determnine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main aurdiono board and it does this with two bluetooth module. While I struggled to connect wires and pair bluetooth modules and not break my project, I still completed my project and gained new knowledge regarding engineering.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
