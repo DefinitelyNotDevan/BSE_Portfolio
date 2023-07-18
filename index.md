@@ -1,5 +1,5 @@
 # Gesture Controlled Rover
-My project is the Gesture Controlled Rover that uses an accelerometer to determine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main aurdiono board and it does this with two Bluetooth modules. While I struggled to connect wires and pair Bluetooth modules and not break my project, I still completed my project and gained new knowledge regarding engineering.
+My project is the Gesture Controlled Rover which uses an accelerometer to determine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main Arduino board and it does this with two Bluetooth modules. While I struggled to connect wires and pair Bluetooth modules and not break my project, I still completed my project and gained new knowledge regarding engineering.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -12,13 +12,21 @@ My project is the Gesture Controlled Rover that uses an accelerometer to determi
 # Final Milestone
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0dxR-TbvpAg" title="Bluestamp Milestone 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+- My third milestone was the completion of the project
+- This means I needed to complete the controller by incorporating an accelerometer
+- My biggest challenge came with this milestone as my project kept breaking
+- First, the accelerometer stopped working
+- Then, I broke my Arduino Micro
+- I eventually figured out the accelerometer could not be on the same column as the Arduino Micro
+- With this project, I have learned about how every part of my project is important
+- The Bluetooth modules are needed to make it wireless
+- The Arduino's are needed to send and receive information from the Bluetooth modules and from the code
+- The accelerometer is needed to send its outputs to the Arduino
+- And the Motor Board is needed to be a middleman between the Arduino and the motors
+- In the future, I want to learn all about how my project works down to every last wire
+- I want to be able to look at a part and say what it does, how it works, and how to set it up with clear, concise answers
 
 
 
