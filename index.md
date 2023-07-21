@@ -1,5 +1,5 @@
 # Gesture Controlled Rover
-My project is the Gesture Controlled Rover which uses an accelerometer to determine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main Arduino board and it does this with two Bluetooth modules. While I struggled to connect wires and pair Bluetooth modules and not break my project, I still completed my project and gained new knowledge regarding engineering.
+My project is the Gesture Controlled Rover which uses an accelerometer to determine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main Arduino board and it does this with two Bluetooth modules. While I struggled to connect wires, pair Bluetooth modules, and not break my project, I still completed the project and gained new knowledge regarding engineering.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -25,7 +25,7 @@ My project is the Gesture Controlled Rover which uses an accelerometer to determ
 - The Bluetooth modules are needed to make it wireless
 - The Arduino's are needed to send and receive information from the Bluetooth modules and from the code
 - The accelerometer is needed to send its outputs to the Arduino
-- And the Motor Board is needed to be a middleman between the Arduino and the motors
+- And the Motor Board is needed to calculate the polarity of the motors and send commands to the motors
 - In the future, I want to learn all about how my project works down to every last wire
 - I want to be able to look at a part and say what it does, how it works, and how to set it up with clear, concise answers
 
