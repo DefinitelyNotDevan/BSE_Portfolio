@@ -59,7 +59,7 @@ My project is the Gesture Controlled Rover which uses an accelerometer to determ
 
 # Schematics 
 
-![Image](Schem.jpg)
+![Image](Schem.png)
 
 Schematics created by Devan Grewal on 7/21/2023.
 
