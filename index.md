@@ -1,5 +1,5 @@
 # Gesture Controlled Rover
-My project is the Gesture Controlled Rover which uses an accelerometer to determine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main Arduino board and it does this with two Bluetooth modules. While I struggled to connect wires, pair Bluetooth modules, and not break my project, I still completed the project and gained new knowledge regarding engineering.
+My project is the Gesture Controlled Rover which uses an accelerometer to determine the movements of the rover. It works by communicating wirelessly the values from the accelerometer to the main Arduino board and it does this with two Bluetooth modules. While I struggled to connect wires, pair Bluetooth modules, and not break my project, I still completed the project and gained new engineering knowledge.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -23,7 +23,7 @@ My project is the Gesture Controlled Rover which uses an accelerometer to determ
 - I eventually figured out the accelerometer could not be on the same column as the Arduino Micro
 - With this project, I have learned about how every part of my project is important
 - The Bluetooth modules are needed to make it wireless
-- The Arduino's are needed to send and receive information from the Bluetooth modules and from the code
+- The Arduino's are needed to send and receive information from the Bluetooth modules and the code
 - The accelerometer is needed to send its outputs to the Arduino
 - And the Motor Board is needed to calculate the polarity of the motors and send commands to the motors
 - In the future, I want to learn all about how my project works down to every last wire
@@ -37,7 +37,7 @@ My project is the Gesture Controlled Rover which uses an accelerometer to determ
 </div>
 
 - My second milestone saw me creating a controller to control my car.
-- The way this will work is by using an accelerometer, Bluetooth chip, and Arduino micro to communicate with my Arduino Uno connected to my car.
+- This will work by using an accelerometer, Bluetooth chip, and Arduino micro to communicate with my Arduino Uno connected to my car.
 - I have not fully completed the controller because I have not added an accelerometer
 - I struggled with pairing the two Bluetooth modules as you needed one for the Arduino micro and one for the Arduino uno but I eventually realized that I had bad wiring and I needed to unplug certain wires in the pairing process for it to work.
 - I am surprised at how well my project is working because in the past it has taken me much longer to create my projects. My final milestone will be my modifications and the accelerometer
