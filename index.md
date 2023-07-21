@@ -59,7 +59,9 @@ My project is the Gesture Controlled Rover which uses an accelerometer to determ
 
 # Schematics 
 
-![Image](schem.jpg)
+![Image](Schem.jpg)
+
+Schematics created by Devan Grewal on 7/21/2023.
 
 # Code
 Here is the code for my car without any modifications. (Arduino Uno)
